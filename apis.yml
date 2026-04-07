@@ -30,7 +30,6 @@ apis:
     tags:
       - Cybersecurity
       - SBOM
-      - API
     properties:
       - type: Documentation
         url: https://api-docs.manifestcyber.com/
