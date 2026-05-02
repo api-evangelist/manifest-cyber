@@ -1,34 +1,35 @@
 # Manifest Cyber (manifest-cyber)
+
 Manifest Cyber provides a cybersecurity platform with an official public API for accessing software bill of materials (SBOM) data, vulnerability analysis, and supply chain security information used by Manifest's frontend apps and internal ETL pipelines.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/manifest-cyber/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Index 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+- **Type:** Index
+- **Position:** Consuming
+- **Access:** 3rd-Party
 
-## Tags:
+## Tags
 
- - Cybersecurity, SBOM, Supply Chain Security, Vulnerability Management
+- Cybersecurity, SBOM, Supply Chain Security, Vulnerability Management
 
 ## Timestamps
 
-- **Created:** 2025-02-12 
-- **Modified:** 2026-03-16 
+- **Created:** 2025-02-12
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Manifest Cyber API
 The official public API for the Manifest Cyber platform v1. Used by Manifest's frontend apps and internal ETL processes to access SBOM data, vulnerability analysis, and software supply chain security information.
 
-**Human URL:** [https://api-docs.manifestcyber.com/](https://api-docs.manifestcyber.com/)
+- **Human URL:** https://api-docs.manifestcyber.com/
+- **Base URL:** https://app.manifestcyber.com/api/v1
 
+#### Tags
 
-#### Tags:
-
- - Cybersecurity, SBOM, API
+- Cybersecurity, SBOM, Vulnerability Management, Supply Chain
 
 #### Properties
 

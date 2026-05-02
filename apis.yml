@@ -7,6 +7,8 @@ description: >-
   internal ETL pipelines.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+position: Consuming
 tags:
   - Cybersecurity
   - SBOM
@@ -15,8 +17,8 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/manifest-cyber/refs/heads/main/apis.yml
 created: '2025-02-12'
-modified: '2026-03-16'
-specificationVersion: '0.19'
+modified: '2026-04-28'
+specificationVersion: '0.20'
 apis:
   - aid: manifest-cyber:manifest-cyber-api
     name: Manifest Cyber API
@@ -30,6 +32,8 @@ apis:
     tags:
       - Cybersecurity
       - SBOM
+      - Vulnerability Management
+      - Supply Chain
     properties:
       - type: Documentation
         url: https://api-docs.manifestcyber.com/
