@@ -38,6 +38,10 @@ apis:
       - type: Documentation
         url: https://api-docs.manifestcyber.com/
 common:
+  - type: GitHubOrganization
+    url: https://github.com/manifest-cyber
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/manifestcyber
   - type: Website
     url: https://manifestcyber.com/
 maintainers:
