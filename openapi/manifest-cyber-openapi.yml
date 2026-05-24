@@ -1,0 +1,240 @@
+openapi: 3.1.0
+info:
+  title: Manifest Cyber API
+  description: >-
+    The Manifest Cyber public REST API allows programmatic management of
+    SBOMs, products, vulnerabilities, and AI/ML bills of materials for
+    software supply-chain security. Authentication uses a Bearer API token
+    generated from organization settings at app.manifestcyber.com.
+  version: "1.0.0"
+  contact:
+    name: Manifest Cyber
+    url: https://api-docs.manifestcyber.com/
+servers:
+  - url: https://api.manifestcyber.com/v1
+    description: Production
+security:
+  - BearerAuth: []
+tags:
+  - name: SBOMs
+    description: Software Bill of Materials uploads and management
+  - name: Assets
+    description: Asset and component inventory
+  - name: Products
+    description: Product hierarchy and metadata
+  - name: Vulnerabilities
+    description: Vulnerability triage and custom vulnerability ingestion
+  - name: Organizations
+    description: Organization management
+  - name: Users
+    description: User management
+paths:
+  /sboms:
+    get:
+      tags: [SBOMs]
+      summary: List uploaded SBOMs
+      operationId: listSboms
+      responses:
+        '200':
+          description: SBOMs
+    post:
+      tags: [SBOMs]
+      summary: Upload an SBOM
+      description: Upload a CycloneDX or SPDX SBOM in JSON format.
+      operationId: uploadSbom
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '201':
+          description: Uploaded
+  /sboms/{sbomId}:
+    get:
+      tags: [SBOMs]
+      summary: Get SBOM details
+      operationId: getSbom
+      parameters:
+        - name: sbomId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: SBOM
+    delete:
+      tags: [SBOMs]
+      summary: Delete an SBOM
+      operationId: deleteSbom
+      parameters:
+        - name: sbomId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Deleted
+  /assets:
+    get:
+      tags: [Assets]
+      summary: List assets
+      operationId: listAssets
+      responses:
+        '200':
+          description: Assets
+  /assets/{assetId}:
+    get:
+      tags: [Assets]
+      summary: Get asset details (risk, vulnerabilities, components)
+      operationId: getAsset
+      parameters:
+        - name: assetId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Asset
+  /assets/{assetId}/vulnerabilities:
+    get:
+      tags: [Vulnerabilities]
+      summary: List vulnerabilities affecting an asset
+      operationId: getAssetVulnerabilities
+      parameters:
+        - name: assetId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Vulnerabilities
+  /products:
+    get:
+      tags: [Products]
+      summary: List products
+      operationId: listProducts
+      responses:
+        '200':
+          description: Products
+    post:
+      tags: [Products]
+      summary: Create a product
+      operationId: createProduct
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Product
+  /products/{productId}:
+    get:
+      tags: [Products]
+      summary: Get a product
+      operationId: getProduct
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Product
+    patch:
+      tags: [Products]
+      summary: Update a product
+      operationId: updateProduct
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Updated
+  /vulnerabilities/custom:
+    get:
+      tags: [Vulnerabilities]
+      summary: Fetch custom vulnerabilities
+      description: Requires the `view-all` plus `update-custom-vulnerability` scope.
+      operationId: listCustomVulnerabilities
+      responses:
+        '200':
+          description: Custom vulnerabilities
+    post:
+      tags: [Vulnerabilities]
+      summary: Create or update a custom vulnerability
+      description: >-
+        Creates a new custom vulnerability or updates an existing one (when an
+        ID is supplied). Requires the `create-custom-vulnerability` and/or
+        `update-custom-vulnerability` scopes. Empty payload values will clear
+        existing values on update.
+      operationId: upsertCustomVulnerability
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Created or updated
+  /organizations:
+    get:
+      tags: [Organizations]
+      summary: List organizations
+      operationId: listOrganizations
+      responses:
+        '200':
+          description: Organizations
+  /organizations/{orgId}:
+    get:
+      tags: [Organizations]
+      summary: Get organization
+      operationId: getOrganization
+      parameters:
+        - name: orgId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Organization
+  /users:
+    get:
+      tags: [Users]
+      summary: List users
+      operationId: listUsers
+      responses:
+        '200':
+          description: Users
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: API token from organization settings at app.manifestcyber.com. Send as `Authorization: Bearer <token>`.
