@@ -2,7 +2,7 @@
 
 Manifest Cyber provides a cybersecurity platform with an official public API for accessing software bill of materials (SBOM) data, vulnerability analysis, and supply chain security information used by Manifest's frontend apps and internal ETL pipelines.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/manifest-cyber/refs/heads/main/apis.yml)
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/manifest-cyber/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/manifest-cyber/refs/heads/main/apis.yml)
 
 ## Scope
 
@@ -12,7 +12,10 @@ Manifest Cyber provides a cybersecurity platform with an official public API for
 
 ## Tags
 
-- Cybersecurity, SBOM, Supply Chain Security, Vulnerability Management
+- Cybersecurity
+- SBOM
+- Supply Chain Security
+- Vulnerability Management
 
 ## Timestamps
 
@@ -22,14 +25,18 @@ Manifest Cyber provides a cybersecurity platform with an official public API for
 ## APIs
 
 ### Manifest Cyber API
+
 The official public API for the Manifest Cyber platform v1. Used by Manifest's frontend apps and internal ETL processes to access SBOM data, vulnerability analysis, and software supply chain security information.
 
-- **Human URL:** https://api-docs.manifestcyber.com/
-- **Base URL:** https://app.manifestcyber.com/api/v1
+- **Human URL:** [https://api-docs.manifestcyber.com/](https://api-docs.manifestcyber.com/)
+- **Base URL:** `https://app.manifestcyber.com/api/v1`
 
 #### Tags
 
-- Cybersecurity, SBOM, Vulnerability Management, Supply Chain
+- Cybersecurity
+- SBOM
+- Vulnerability Management
+- Supply Chain
 
 #### Properties
 
@@ -37,10 +44,11 @@ The official public API for the Manifest Cyber platform v1. Used by Manifest's f
 
 ## Common Properties
 
+- [GitHub Organization](https://github.com/manifest-cyber)
+- [LinkedIn](https://www.linkedin.com/company/manifestcyber)
 - [Website](https://manifestcyber.com/)
 
 ## Maintainers
 
 **FN:** Kin Lane
-
 **Email:** kin@apievangelist.com
