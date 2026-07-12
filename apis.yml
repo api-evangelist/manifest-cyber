@@ -38,12 +38,18 @@ apis:
       - type: Documentation
         url: https://api-docs.manifestcyber.com/
 common:
+  - type: TrustCenter
+    url: security/manifest-cyber-trust-center.yml
+  - type: DomainSecurity
+    url: security/manifest-cyber-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/manifest-cyber
   - type: LinkedIn
     url: https://www.linkedin.com/company/manifestcyber
   - type: Website
     url: https://manifestcyber.com/
+  - type: Blog
+    url: https://manifestcyber.com/blog/rss.xml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
