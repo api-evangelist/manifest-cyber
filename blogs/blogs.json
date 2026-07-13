@@ -1,0 +1,21 @@
+{
+  "repo": "manifest-cyber",
+  "feeds": [
+    {
+      "source": "https://manifestcyber.com/blog/rss.xml",
+      "feed_url": "https://manifestcyber.com/blog/rss.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://manifestcyber.com/",
+      "feed_url": "https://manifestcyber.com/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 54
+}
