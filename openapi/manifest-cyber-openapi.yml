@@ -237,4 +237,4 @@ components:
     BearerAuth:
       type: http
       scheme: bearer
-      description: API token from organization settings at app.manifestcyber.com. Send as `Authorization: Bearer <token>`.
+      description: "API token from organization settings at app.manifestcyber.com. Send as `Authorization: Bearer <token>`."
