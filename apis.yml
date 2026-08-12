@@ -32,23 +32,81 @@ created: '2025-02-12'
 modified: '2026-04-28'
 specificationVersion: '0.20'
 apis:
-  - aid: manifest-cyber:manifest-cyber-api
-    name: Manifest Cyber API
-    description: >-
-      The official public API for the Manifest Cyber platform v1. Used by
-      Manifest's frontend apps and internal ETL processes to access SBOM
-      data, vulnerability analysis, and software supply chain security
-      information.
-    humanURL: https://api-docs.manifestcyber.com/
-    baseURL: https://app.manifestcyber.com/api/v1
-    tags:
-      - Cybersecurity
-      - SBOM
-      - Vulnerability Management
-      - Supply Chain
-    properties:
-      - type: Documentation
-        url: https://api-docs.manifestcyber.com/
+- aid: manifest-cyber:manifest-cyber-api
+  name: Manifest Cyber API
+  description: >-
+    The official public API for the Manifest Cyber platform v1. Used by Manifest's frontend apps and internal
+    ETL processes to access SBOM data, vulnerability analysis, and software supply chain security information.
+  humanURL: https://api-docs.manifestcyber.com/
+  baseURL: https://app.manifestcyber.com/api/v1
+  tags:
+  - Cybersecurity
+  - SBOM
+  - Vulnerability Management
+  - Supply Chain
+  properties:
+  - type: Documentation
+    url: https://api-docs.manifestcyber.com/
+- aid: manifest-cyber:manifest-cyber-assets-api
+  name: Manifest Cyber Assets API
+  description: Asset and component inventory
+  humanURL: https://api-docs.manifestcyber.com/
+  baseURL: https://app.manifestcyber.com/api/v1
+  tags:
+  - Assets
+  properties:
+  - type: OpenAPI
+    url: openapi/manifest-cyber-assets-api-openapi.yml
+- aid: manifest-cyber:manifest-cyber-organizations-api
+  name: Manifest Cyber Organizations API
+  description: Organization management
+  humanURL: https://api-docs.manifestcyber.com/
+  baseURL: https://app.manifestcyber.com/api/v1
+  tags:
+  - Organizations
+  properties:
+  - type: OpenAPI
+    url: openapi/manifest-cyber-organizations-api-openapi.yml
+- aid: manifest-cyber:manifest-cyber-products-api
+  name: Manifest Cyber Products API
+  description: Product hierarchy and metadata
+  humanURL: https://api-docs.manifestcyber.com/
+  baseURL: https://app.manifestcyber.com/api/v1
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/manifest-cyber-products-api-openapi.yml
+- aid: manifest-cyber:manifest-cyber-sboms-api
+  name: Manifest Cyber SBO Ms API
+  description: Software Bill of Materials uploads and management
+  humanURL: https://api-docs.manifestcyber.com/
+  baseURL: https://app.manifestcyber.com/api/v1
+  tags:
+  - SBOMs
+  properties:
+  - type: OpenAPI
+    url: openapi/manifest-cyber-sboms-api-openapi.yml
+- aid: manifest-cyber:manifest-cyber-users-api
+  name: Manifest Cyber Users API
+  description: User management
+  humanURL: https://api-docs.manifestcyber.com/
+  baseURL: https://app.manifestcyber.com/api/v1
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/manifest-cyber-users-api-openapi.yml
+- aid: manifest-cyber:manifest-cyber-vulnerabilities-api
+  name: Manifest Cyber Vulnerabilities API
+  description: Vulnerability triage and custom vulnerability ingestion
+  humanURL: https://api-docs.manifestcyber.com/
+  baseURL: https://app.manifestcyber.com/api/v1
+  tags:
+  - Vulnerabilities
+  properties:
+  - type: OpenAPI
+    url: openapi/manifest-cyber-vulnerabilities-api-openapi.yml
 common:
   - type: TrustCenter
     url: security/manifest-cyber-trust-center.yml
