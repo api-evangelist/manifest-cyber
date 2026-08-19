@@ -1,0 +1,63 @@
+openapi: 3.2.0
+info:
+  title: Manifest Cyber Vulnerabilities API
+  description: The Manifest Cyber public REST API allows programmatic management of SBOMs, products, vulnerabilities, and AI/ML bills of materials for software supply-chain security. Authentication uses a Bearer API token generated from organization settings at app.manifestcyber.com.
+  version: 1.0.0
+  contact:
+    name: Manifest Cyber
+    url: https://api-docs.manifestcyber.com/
+servers:
+- url: https://api.manifestcyber.com/v1
+  description: Production
+security:
+- BearerAuth: []
+tags:
+- name: Vulnerabilities
+  description: Vulnerability triage and custom vulnerability ingestion
+paths:
+  /assets/{assetId}/vulnerabilities:
+    get:
+      tags:
+      - Vulnerabilities
+      summary: List vulnerabilities affecting an asset
+      operationId: getAssetVulnerabilities
+      parameters:
+      - name: assetId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Vulnerabilities
+  /vulnerabilities/custom:
+    get:
+      tags:
+      - Vulnerabilities
+      summary: Fetch custom vulnerabilities
+      description: Requires the `view-all` plus `update-custom-vulnerability` scope.
+      operationId: listCustomVulnerabilities
+      responses:
+        '200':
+          description: Custom vulnerabilities
+    post:
+      tags:
+      - Vulnerabilities
+      summary: Create or update a custom vulnerability
+      description: Creates a new custom vulnerability or updates an existing one (when an ID is supplied). Requires the `create-custom-vulnerability` and/or `update-custom-vulnerability` scopes. Empty payload values will clear existing values on update.
+      operationId: upsertCustomVulnerability
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Created or updated
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: 'API token from organization settings at app.manifestcyber.com. Send as `Authorization: Bearer <token>`.'

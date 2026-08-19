@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Manifest Cyber Vulnerabilities API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Vulnerabilities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List vulnerabilities affecting an asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.manifestcyber.com/v1/assets/:assetId/vulnerabilities",
+            "params": [
+              {
+                "name": "assetId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List vulnerabilities affecting an asset"
+        },
+        {
+          "info": {
+            "name": "Fetch custom vulnerabilities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.manifestcyber.com/v1/vulnerabilities/custom"
+          },
+          "docs": "Requires the `view-all` plus `update-custom-vulnerability` scope."
+        },
+        {
+          "info": {
+            "name": "Create or update a custom vulnerability",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.manifestcyber.com/v1/vulnerabilities/custom",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new custom vulnerability or updates an existing one (when an ID is supplied). Requires the `create-custom-vulnerability` and/or `update-custom-vulnerability` scopes. Empty payload values will clear existing values on update."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

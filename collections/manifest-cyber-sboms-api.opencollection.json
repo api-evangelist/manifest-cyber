@@ -1,0 +1,86 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Manifest Cyber SBO Ms API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "SBOMs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List uploaded SBOMs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.manifestcyber.com/v1/sboms"
+          },
+          "docs": "List uploaded SBOMs"
+        },
+        {
+          "info": {
+            "name": "Upload an SBOM",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.manifestcyber.com/v1/sboms",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Upload a CycloneDX or SPDX SBOM in JSON format."
+        },
+        {
+          "info": {
+            "name": "Get SBOM details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.manifestcyber.com/v1/sboms/:sbomId",
+            "params": [
+              {
+                "name": "sbomId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get SBOM details"
+        },
+        {
+          "info": {
+            "name": "Delete an SBOM",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.manifestcyber.com/v1/sboms/:sbomId",
+            "params": [
+              {
+                "name": "sbomId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an SBOM"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

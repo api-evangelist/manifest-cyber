@@ -1,0 +1,32 @@
+{
+  "provider": "manifest-cyber",
+  "sources": [
+    "manifest-cyber-assets-api-openapi.yml",
+    "manifest-cyber-organizations-api-openapi.yml",
+    "manifest-cyber-products-api-openapi.yml",
+    "manifest-cyber-sboms-api-openapi.yml",
+    "manifest-cyber-users-api-openapi.yml",
+    "manifest-cyber-vulnerabilities-api-openapi.yml"
+  ],
+  "outputs": [
+    "manifest-cyber-assets-api-openapi.yml",
+    "manifest-cyber-organizations-api-openapi.yml",
+    "manifest-cyber-products-api-openapi.yml",
+    "manifest-cyber-sboms-api-openapi.yml",
+    "manifest-cyber-users-api-openapi.yml",
+    "manifest-cyber-vulnerabilities-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "manifest-cyber-assets-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "manifest-cyber-organizations-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "manifest-cyber-products-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "manifest-cyber-sboms-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "manifest-cyber-users-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "manifest-cyber-vulnerabilities-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": []
+}

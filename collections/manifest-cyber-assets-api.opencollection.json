@@ -1,0 +1,53 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Manifest Cyber Assets API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.manifestcyber.com/v1/assets"
+          },
+          "docs": "List assets"
+        },
+        {
+          "info": {
+            "name": "Get asset details (risk, vulnerabilities, components)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.manifestcyber.com/v1/assets/:assetId",
+            "params": [
+              {
+                "name": "assetId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get asset details (risk, vulnerabilities, components)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

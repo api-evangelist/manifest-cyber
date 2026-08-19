@@ -1,0 +1,83 @@
+openapi: 3.2.0
+info:
+  title: Manifest Cyber SBO Ms API
+  description: The Manifest Cyber public REST API allows programmatic management of SBOMs, products, vulnerabilities, and AI/ML bills of materials for software supply-chain security. Authentication uses a Bearer API token generated from organization settings at app.manifestcyber.com.
+  version: 1.0.0
+  contact:
+    name: Manifest Cyber
+    url: https://api-docs.manifestcyber.com/
+servers:
+- url: https://api.manifestcyber.com/v1
+  description: Production
+security:
+- BearerAuth: []
+tags:
+- name: SBOMs
+  description: Software Bill of Materials uploads and management
+paths:
+  /sboms:
+    get:
+      tags:
+      - SBOMs
+      summary: List uploaded SBOMs
+      operationId: listSboms
+      responses:
+        '200':
+          description: SBOMs
+    post:
+      tags:
+      - SBOMs
+      summary: Upload an SBOM
+      description: Upload a CycloneDX or SPDX SBOM in JSON format.
+      operationId: uploadSbom
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '201':
+          description: Uploaded
+  /sboms/{sbomId}:
+    get:
+      tags:
+      - SBOMs
+      summary: Get SBOM details
+      operationId: getSbom
+      parameters:
+      - name: sbomId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: SBOM
+    delete:
+      tags:
+      - SBOMs
+      summary: Delete an SBOM
+      operationId: deleteSbom
+      parameters:
+      - name: sbomId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Deleted
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: 'API token from organization settings at app.manifestcyber.com. Send as `Authorization: Bearer <token>`.'

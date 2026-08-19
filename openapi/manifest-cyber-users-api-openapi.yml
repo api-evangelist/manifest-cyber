@@ -1,0 +1,32 @@
+openapi: 3.2.0
+info:
+  title: Manifest Cyber Users API
+  description: The Manifest Cyber public REST API allows programmatic management of SBOMs, products, vulnerabilities, and AI/ML bills of materials for software supply-chain security. Authentication uses a Bearer API token generated from organization settings at app.manifestcyber.com.
+  version: 1.0.0
+  contact:
+    name: Manifest Cyber
+    url: https://api-docs.manifestcyber.com/
+servers:
+- url: https://api.manifestcyber.com/v1
+  description: Production
+security:
+- BearerAuth: []
+tags:
+- name: Users
+  description: User management
+paths:
+  /users:
+    get:
+      tags:
+      - Users
+      summary: List users
+      operationId: listUsers
+      responses:
+        '200':
+          description: Users
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: 'API token from organization settings at app.manifestcyber.com. Send as `Authorization: Bearer <token>`.'
