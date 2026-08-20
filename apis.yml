@@ -63,6 +63,8 @@ apis:
   humanURL: https://api-docs.manifestcyber.com/
   baseURL: https://app.manifestcyber.com/api/v1
   tags:
+  - Organization
+  tags_raw:
   - Organizations
   properties:
   - type: OpenAPI
@@ -73,6 +75,8 @@ apis:
   humanURL: https://api-docs.manifestcyber.com/
   baseURL: https://app.manifestcyber.com/api/v1
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
@@ -93,6 +97,8 @@ apis:
   humanURL: https://api-docs.manifestcyber.com/
   baseURL: https://app.manifestcyber.com/api/v1
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
