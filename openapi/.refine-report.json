@@ -1,12 +1,7 @@
 {
   "provider": "manifest-cyber",
   "sources": [
-    "manifest-cyber-assets-api-openapi.yml",
-    "manifest-cyber-organizations-api-openapi.yml",
-    "manifest-cyber-products-api-openapi.yml",
-    "manifest-cyber-sboms-api-openapi.yml",
-    "manifest-cyber-users-api-openapi.yml",
-    "manifest-cyber-vulnerabilities-api-openapi.yml"
+    "_original/manifest-cyber-openapi.yml"
   ],
   "outputs": [
     "manifest-cyber-assets-api-openapi.yml",
@@ -20,13 +15,16 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "manifest-cyber-assets-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "manifest-cyber-organizations-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "manifest-cyber-products-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "manifest-cyber-sboms-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "manifest-cyber-users-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "manifest-cyber-vulnerabilities-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "manifest-cyber-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "manifest-cyber-assets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "manifest-cyber-organizations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "manifest-cyber-products-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "manifest-cyber-sboms-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "manifest-cyber-users-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "manifest-cyber-vulnerabilities-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
