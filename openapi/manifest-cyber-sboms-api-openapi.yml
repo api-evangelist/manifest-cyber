@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Manifest Cyber SBO Ms API
+  title: Manifest Cyber SBOMs API
   description: The Manifest Cyber public REST API allows programmatic management of SBOMs, products, vulnerabilities, and AI/ML bills of materials for software supply-chain security. Authentication uses a Bearer API token generated from organization settings at app.manifestcyber.com.
   version: 1.0.0
   contact:
