@@ -125,6 +125,9 @@ apis:
   - type: OpenAPI
     url: openapi/manifest-cyber-vulnerabilities-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/manifest-cyber-capability-edges.yml
+    name: Manifest Cyber Business Capability Map
   - type: TrustCenter
     url: security/manifest-cyber-trust-center.yml
   - type: DomainSecurity

@@ -1,0 +1,36 @@
+slug: manifest-cyber
+provider: Manifest Cyber
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Vulnerabilities
+  spec_file: manifest-cyber-vulnerabilities-api-openapi.yml
+  capability_id: BC-620.40
+  capability_id_l1: BC-620
+  capability_name: Vulnerability Management
+  confidence: 0.92
+  evidence: '''List vulnerabilities affecting an asset''; ''Create or update a custom vulnerability'''
+  reason: Operations enumerate and maintain vulnerabilities against assets, which is squarely vulnerability
+    scanning/remediation management within cybersecurity.
+- tag: Assets
+  spec_file: manifest-cyber-assets-api-openapi.yml
+  capability_id: BC-620.40
+  capability_id_l1: BC-620
+  capability_name: Vulnerability Management
+  confidence: 0.75
+  evidence: GET /assets/{assetId} 'Get asset details (risk, vulnerabilities, components)'; vendor provides
+    'SBOM data, vulnerability analysis, and supply chain security information'
+  reason: Assets here are software assets whose detail payload is risk, vulnerabilities and SBOM components,
+    so the surface serves vulnerability identification and remediation tracking. Confidence 0.75 rather
+    than higher because only two read endpoints are exposed and an IT asset-inventory reading (BC-600.50)
+    is a defensible alternative.
