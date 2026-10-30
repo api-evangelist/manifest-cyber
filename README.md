@@ -1,4 +1,4 @@
-# Manifest Cyber (manifest-cyber)
+# Manifest Cyber
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,53 +66,127 @@
 
 Manifest Cyber provides a cybersecurity platform with an official public API for accessing software bill of materials (SBOM) data, vulnerability analysis, and supply chain security information used by Manifest's frontend apps and internal ETL pipelines.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/manifest-cyber/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/manifest-cyber/refs/heads/main/apis.yml)
+**Areas:** Cybersecurity · SBOM · Supply Chain Security · Vulnerability Management
 
-## Scope
+## Manifest Cyber on APIs.io
 
-- **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for Manifest Cyber is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/manifest-cyber/](https://apis.io/providers/manifest-cyber/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- Cybersecurity
-- SBOM
-- Supply Chain Security
-- Vulnerability Management
+- [Manifest Cyber API](https://apis.io/apis/manifest-cyber/manifest-cyber-api/) — The official public API for the Manifest Cyber platform v1. Used by Manifest's frontend apps and internal ETL processes to access SBOM data, vulnerability…
+- [Manifest Cyber Assets API](https://apis.io/apis/manifest-cyber/manifest-cyber-assets-api/) — Asset and component inventory
+- [Manifest Cyber Organizations API](https://apis.io/apis/manifest-cyber/manifest-cyber-organizations-api/) — Organization management
+- [Manifest Cyber Products API](https://apis.io/apis/manifest-cyber/manifest-cyber-products-api/) — Product hierarchy and metadata
+- [Manifest Cyber SBO Ms API](https://apis.io/apis/manifest-cyber/manifest-cyber-sboms-api/) — Software Bill of Materials uploads and management
+- [Manifest Cyber Users API](https://apis.io/apis/manifest-cyber/manifest-cyber-users-api/) — User management
+- [Manifest Cyber Vulnerabilities API](https://apis.io/apis/manifest-cyber/manifest-cyber-vulnerabilities-api/) — Vulnerability triage and custom vulnerability ingestion
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-12
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Manifest Cyber API
+Model Context Protocol servers that expose the API to agents.
 
-The official public API for the Manifest Cyber platform v1. Used by Manifest's frontend apps and internal ETL processes to access SBOM data, vulnerability analysis, and software supply chain security information.
+- [manifest-cyber](https://apis.io/servers/manifest-cyber/manifest-cyber/)
 
-- **Human URL:** [https://api-docs.manifestcyber.com/](https://api-docs.manifestcyber.com/)
-- **Base URL:** `https://app.manifestcyber.com/api/v1`
+#### Collections (6)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Cybersecurity
-- SBOM
-- Vulnerability Management
-- Supply Chain
+- [Manifest Cyber Assets API](https://apis.io/collections/manifest-cyber/open-manifest-cyber-assets-api/)
+- [Manifest Cyber Organizations API](https://apis.io/collections/manifest-cyber/open-manifest-cyber-organizations-api/)
+- [Manifest Cyber Products API](https://apis.io/collections/manifest-cyber/open-manifest-cyber-products-api/)
+- [Manifest Cyber SBO Ms API](https://apis.io/collections/manifest-cyber/open-manifest-cyber-sboms-api/)
+- [Manifest Cyber Users API](https://apis.io/collections/manifest-cyber/open-manifest-cyber-users-api/)
+- [Manifest Cyber Vulnerabilities API](https://apis.io/collections/manifest-cyber/open-manifest-cyber-vulnerabilities-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://api-docs.manifestcyber.com/)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Manifest Cyber Domain Security](https://apis.io/security/manifest-cyber/manifest-cyber-domain-security/)
+- [Manifest Cyber Trust Center](https://apis.io/security/manifest-cyber/manifest-cyber-trust-center/)
 
-- [GitHub Organization](https://github.com/manifest-cyber)
-- [LinkedIn](https://www.linkedin.com/company/manifestcyber)
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Manifest Cyber Plans Pricing](https://apis.io/plans/manifest-cyber/manifest-cyber-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Manifest Cyber Rate Limits](https://apis.io/rate-limits/manifest-cyber/manifest-cyber-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Manifest Cyber Finops](https://apis.io/finops/manifest-cyber/manifest-cyber-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://manifestcyber.com/)
+- [Blog](https://manifestcyber.com/blog/rss.xml)
+- [GitHub](https://github.com/manifest-cyber)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 25.1** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 60.0 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 15.8 |
+
+**Agent readiness 28.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | documented (partial credit) |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/manifest-cyber/](https://apis.io/providers/manifest-cyber/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Manifest Cyber: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/manifest-cyber/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
